@@ -40,4 +40,47 @@ header {
           text-decoration: none;
           text-transform: uppercase; }
 
+content .board {
+  position: fixed;
+  left: 50%;
+  margin-left: -25%;
+  margin-top: 7vh;
+  height: 60vh;
+  width: 50%;
+  background: #252525;
+  box-shadow: 15px 25.981px 43px 0px #0c0447; }
+  content .board .cells-box:before {
+    display: block;
+    padding-top: 100%; }
+  content .board .cells-box {
+    position: relative;
+    width: 50vh;
+    margin: 10px;
+    margin: 6% auto; }
+    content .board .cells-box .cell:hover {
+      box-shadow: 0 0 30px 10px #ffffbe; }
+    content .board .cells-box .cell {
+      margin-left: 3%;
+      margin-top: 3%;
+      float: left;
+      width: 30%;
+      height: 15vh;
+      box-sizing: border-box;
+      background: #444;
+      border: 1px solid #04c4f2;
+      background: #605ca8;
+      cursor: pointer; }
+content .indicator-turn:before {
+  content: "";
+  display: block;
+  padding-top: 100%; }
+content .indicator-turn {
+  position: absolute;
+  top: 18vh;
+  left: 20%;
+  width: 17vh;
+  background: #464646;
+  box-shadow: 21.5px 37.239px 65px 0px black;
+  z-index: 2; }
+
 /*# sourceMappingURL=style.css.map */
