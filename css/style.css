@@ -83,4 +83,18 @@ content .indicator-turn {
   box-shadow: 21.5px 37.239px 65px 0px black;
   z-index: 2; }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background: #434b58;
+  opacity: 0.89; }
+  footer .messages-box {
+    margin: 20px 30px;
+    font-size: 20px;
+    font-family: "Coda";
+    color: #08ccef;
+    text-shadow: 0px 0px 10px  #08ccef; }
+
 /*# sourceMappingURL=style.css.map */
