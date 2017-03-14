@@ -3,4 +3,60 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    margin: 0;
+}
+
+header{
+    margin: 0;
+    
+    .nav-panel{
+      background: linear-gradient(to right,#000,#30c1ee);
+      width: 100%;
+      height: 15vh;
+      z-index: 1;
+        
+        .logo{
+            margin-left: 10%;
+            float: left;
+            height: 15vh;
+            img{
+                height: 15vh;
+            }
+            
+        }
+        
+        ul{
+
+            margin: 0 auto;
+            
+            width: 450px;
+            height: 15vh;
+            list-style:none;
+            
+            li:hover{
+                background: #605ca8;  
+                transition-duration: 0s;
+            }   
+            
+            li{
+                display: inline-block;
+                margin: 0 15px;
+                padding: 0 10px; 
+                height: 15vh;
+                transition-duration: 1s;
+                font-size: 24px;
+
+                
+                a{
+                    display: block;
+                    margin-top: 6vh;
+                    color: #a6a6a6;
+                    text-decoration: none;
+                    text-transform: uppercase;  
+                    
+                }
+            }
+        }
+        
+    }
 }
