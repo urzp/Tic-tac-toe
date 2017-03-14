@@ -94,7 +94,18 @@ content {
             .cell:hover{
              
                 box-shadow: 0 0 30px 10px #ffffbe;
+                background-image: url(../img/X-board.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                transition-duration: 0s;
+                //transform: rotateY(0deg);
+                //transform: rotateY(-180deg);
  
+            }
+            
+            .cell:click{
+               
             }
             
             .cell{
@@ -107,7 +118,8 @@ content {
                 background: #444;
                 border: 1px solid #04c4f2;
                 background:#605ca8;
-                cursor: pointer;       
+                cursor: pointer;      
+                transition-duration: 1s;
             }
         }   
         
@@ -127,6 +139,11 @@ content {
         background: #464646;
         box-shadow: 21.5px 37.239px 65px 0px rgb( 0, 0, 0 );
         z-index: 2;
+        background-image: url(../img/X-ind.png);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;
+        
     }
 
 }

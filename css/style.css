@@ -58,7 +58,12 @@ content .board {
     margin: 10px;
     margin: 6% auto; }
     content .board .cells-box .cell:hover {
-      box-shadow: 0 0 30px 10px #ffffbe; }
+      box-shadow: 0 0 30px 10px #ffffbe;
+      background-image: url(../img/X-board.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      transition-duration: 0s; }
     content .board .cells-box .cell {
       margin-left: 3%;
       margin-top: 3%;
@@ -69,7 +74,8 @@ content .board {
       background: #444;
       border: 1px solid #04c4f2;
       background: #605ca8;
-      cursor: pointer; }
+      cursor: pointer;
+      transition-duration: 1s; }
 content .indicator-turn:before {
   content: "";
   display: block;
@@ -81,7 +87,11 @@ content .indicator-turn {
   width: 17vh;
   background: #464646;
   box-shadow: 21.5px 37.239px 65px 0px black;
-  z-index: 2; }
+  z-index: 2;
+  background-image: url(../img/X-ind.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center; }
 
 footer {
   position: fixed;
