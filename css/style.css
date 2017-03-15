@@ -40,6 +40,10 @@ header {
           text-decoration: none;
           text-transform: uppercase; }
 
+content .board:active {
+  transition-duration: 1s;
+  transform: rotateX(0deg);
+  transform: rotateX(-180deg); }
 content .board {
   position: fixed;
   left: 50%;
