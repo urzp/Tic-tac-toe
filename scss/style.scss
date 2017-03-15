@@ -63,19 +63,17 @@ header{
 
 content {
     
-    .board:active{
+   /* .board:active{
          transition-duration: 1s;
         transform: rotateX(0deg);
         transform: rotateX(-180deg);
         
-    }
+    } */
     
 
     .board{
         
-    
-        
-        
+        display: none;
         position: fixed;
        
         left: 50%;
@@ -100,22 +98,27 @@ content {
             margin: 6% auto;
             
             
+           
+            
+             .cell_X:hover {
+                      background-image: url(../img/X-board.png);                     
+                }
+
+             .cell_O:hover{
+                  background-image: url(../img/O-board.png);  
+                }
+                
+            
+
+            
             .cell:hover{
-             
+                transition-duration: 0s; 
                 box-shadow: 0 0 30px 10px #ffffbe;
-                background-image: url(../img/X-board.png);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: center;
-                transition-duration: 0s;
                 //transform: rotateY(0deg);
                 //transform: rotateY(-180deg);
  
             }
             
-            .cell:click{
-               
-            }
             
             .cell{
                 margin-left:3%;
@@ -128,8 +131,33 @@ content {
                 border: 1px solid #04c4f2;
                 background:#605ca8;
                 cursor: pointer;      
-                transition-duration: 1s;
+                
+                
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                transition-duration: 1s;   
+                
             }
+            
+            
+            .set_x{
+                background-image: url(../img/X-board.png); 
+            }
+            
+            .set_x:hover {
+                background-image: url(../img/X-board.png); 
+            }
+            
+            
+            .set_o{
+                background-image: url(../img/O-board.png); 
+            }
+            
+            .set_o:hover {
+                background-image: url(../img/O-board.png); 
+            } 
+            
         }   
         
     }
@@ -140,7 +168,11 @@ content {
         padding-top: 100%;
     }
     
+    
+
+    
     .indicator-turn{
+        display: none;
         position: absolute;
         top: 18vh;
         left: 20%;
@@ -148,11 +180,20 @@ content {
         background: #464646;
         box-shadow: 21.5px 37.239px 65px 0px rgb( 0, 0, 0 );
         z-index: 2;
-        background-image: url(../img/X-ind.png);
         background-repeat: no-repeat;
         background-size: 50%;
         background-position: center;
         
+    }
+    
+    .indicator_X{
+        //transition-duration: 3s;
+        background-image: url(../img/X-ind.png);
+    }
+    
+    .indicator_O{
+        //transition-duration: 3s;
+        background-image: url(../img/O-ind.png);
     }
 
 }
