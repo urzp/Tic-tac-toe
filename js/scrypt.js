@@ -13,7 +13,7 @@ function Game() {
     this.player_1 = new Player("X");
     this.player_2 = new Player("O");
     this.who_turn = this.player_1;
-    this.winner
+    var winner;
     
     this.start = function(){
         this.board = new Board();
@@ -48,29 +48,32 @@ function Game() {
     }
     
     this.turn = function(cell){
-        //alert($(cell).attr("id"))
+        //alert(winner);
+        if (!winner){
         
-        if ($(cell).attr("type")!="X" && $(cell).attr("type")!="O"){
-            $('.indicator-turn').hide("pulsate",1000);
-            $('.messages-box').hide("fade",1000);
-            if (this.who_turn.symbol == "X"){
-                $(cell).addClass("set_x")
-                $(cell).attr("type","X")
-                this.who_turn = this.player_2
-                this.ind_set_symbol("O")
-                
-            } else {
-                $(cell).addClass("set_o")
-                $(cell).attr("type","O") 
-                this.who_turn = this.player_1
-                this.ind_set_symbol("X")
-                
-            } 
-            $('.messages-box').show("fade",1000);
-            $('.indicator-turn').show("drop",1000);
+            if ($(cell).attr("type")!="X" && $(cell).attr("type")!="O"){
+                $('.indicator-turn').hide("pulsate",1000);
+                $('.messages-box').hide("fade",1000);
+                if (this.who_turn.symbol == "X"){
+                    $(cell).addClass("set_x")
+                    $(cell).attr("type","X")
+                    this.who_turn = this.player_2
+                    this.ind_set_symbol("O")
+
+                } else {
+                    $(cell).addClass("set_o")
+                    $(cell).attr("type","O") 
+                    this.who_turn = this.player_1
+                    this.ind_set_symbol("X")
+
+                } 
+                $('.messages-box').show("fade",1000);
+                $('.indicator-turn').show("drop",1000);
+            }
+
+            this.check_winner();
+            
         }
-        
-        this.check_winner();
     }
     
     this.check_winner = function(){
@@ -78,7 +81,7 @@ function Game() {
         LINES.forEach(function(line){ 
             if ( line.every(function(n) { return $($('.cell')[n]).attr("type") == "X"; }) ) {
                  win_line = line 
-                 this.winner="X";
+                 winner="X";
                 setTimeout(function(){
                  $('.messages-box').html("X player win!!!");
                 },1100)
@@ -86,7 +89,7 @@ function Game() {
 
             if ( line.every(function(n) { return $($('.cell')[n]).attr("type") == "O"; }) ) {
                  win_line = line 
-                 this.winner="O";
+                 winner="O";
                 $('.messages-box').html("O player win!!!") ;
             }    
         });
@@ -95,6 +98,8 @@ function Game() {
         if (win_line) {
             this.end(win_line);
         };
+        
+        
     }
     
     this.end = function(win_line){
@@ -104,9 +109,22 @@ function Game() {
            $($('.cell')[n]).addClass("winner"); 
         })
         
+        setTimeout(function(){
+            if (this.who_turn == "X"){
+                $('.cell').removeClass("cell_X");
+            } else {
+                $('.cell').removeClass("cell_O");
+            }
+        }, 1000)
         
         
+        
+
     }
+    
+     this.clear = function(){
+         
+     }
     
 }
 
@@ -121,16 +139,18 @@ function Board() {
     
 }
 
- var game = new Game();
+var game = new Game();
+
+
 
 
 $('document').ready( function(){
-   
-    
+      
     game.start();
+    
     $('.cell').on( "click", function(event) {
         game.turn(event.target)
-        
-    console.dir(  )  });
+    });
+   
 
 })
