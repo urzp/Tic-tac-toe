@@ -109,11 +109,13 @@ content {
                 }
                 
             
-
+            .winner {
+              box-shadow: 0 0 30px 10px #ffffbe;  
+            }
             
-            .cell:hover{
+            .cell:hover {
                 transition-duration: 0s; 
-                box-shadow: 0 0 30px 10px #ffffbe;
+                box-shadow: 0 0 30px 10px #ffffbe;  
                 //transform: rotateY(0deg);
                 //transform: rotateY(-180deg);
  

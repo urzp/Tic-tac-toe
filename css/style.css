@@ -69,6 +69,8 @@ content {
         background-image: url(../img/X-board.png); }
       content .board .cells-box .cell_O:hover {
         background-image: url(../img/O-board.png); }
+      content .board .cells-box .winner {
+        box-shadow: 0 0 30px 10px #ffffbe; }
       content .board .cells-box .cell:hover {
         transition-duration: 0s;
         box-shadow: 0 0 30px 10px #ffffbe; }
